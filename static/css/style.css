@@ -1,0 +1,39 @@
+html, body{
+    height: 100%;
+    max-height: 100%;
+    font-family: font-family: 'Roboto', sans-serif;;
+}
+.title{
+    color:white;
+    font-weight: 100;
+    line-height: 50px;
+    text-align: center;
+    pa
+}
+.top-container{
+    padding-top: 15%;
+}
+.general-container{
+    padding-left: 18%;
+    background: url('img/bg_img.jpg');
+    background-color: blueviolet;
+    height: 100%;
+    color: white;
+}
+.general-container form{
+    padding: 30px 0 0 0;
+}
+.general-container form label{
+    font-weight: 100;
+}
+.btn-orange{
+    background-color: #e8643e;
+    border: none;
+}
+.btn-orange:hover{
+    background-color: #dc5129;
+    border: none;
+}
+.form-group{
+    padding: 0 10px 0 5px;
+}
