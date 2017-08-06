@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,37 +12,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400" rel="stylesheet">
       <!-- Custom styles -->
-      <link rel="stylesheet" href="{% static 'css/landing.css'  %}">
+      <link rel="stylesheet" href="{% static 'css/style.css'  %}">
   </head>
+
+
   <body>
 
-  <div class="general-container">
+  <div class="wrapper">
+      <div class="wrapper-content">
+      {% include 'navbar.html' %}
+          {% block content %}
 
-        <div class="container top-container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-12">
-                    <h1 class="title">Наш магазин скоро откроется!<br>
-                        Оставляйте ваш e-mail в форме ниже</h1>
-                </div>
-            </div>
-            <div>
-                <form action="" method="post" class="form-inline text-center">{% csrf_token %}
-                    <div class="form-group">
-                        <label>Ваш email:</label>
-                        <input type="email" name="{{ form.email.email }}" class="form-control">
-                    </div>
-                <div class="form-group">
-                        <label>Ваше имя:</label>
-                        <input type="text" name="{{ form.name.name }}" class="form-control">
-                    </div>
+          {% endblock content %}
 
-                        <button type="submit" class="btn btn-primary btn-orange">отправить</button>
 
-                </form>
+       </div>
 
-            </div>
-        </div>
   </div>
+  {% include 'footer.html' %}
+
+
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
